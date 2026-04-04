@@ -1,0 +1,210 @@
+/* General reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the header */
+  #header {
+    background-color: #3e5b5f; /* Green background */
+    color: white; /* White text */
+    padding: 20px; /* Some padding */
+    text-align: center; /* Centered text */
+  }
+  
+  /* Styling for the navigation links */
+  #header nav ul {
+    list-style-type: none; /* Remove bullets */
+  }
+  
+  #header nav ul li {
+    display: inline; /* Display list items in a row */
+    margin: 0 10px; /* Add some space between items */
+  }
+  
+  #header nav ul li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Bold text */
+    padding: 5px 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  #header nav ul li a:hover {
+    background-color: #b7c3b7; /* Slightly darker green on hover */
+  }
+
+  #image{
+    width: 350px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    margin-top: 20px; /* Some space above the search bar */
+  }
+  
+  /* Styling for the search bar */
+  .search-bar {
+    width: 300px; /* Width of the search bar */
+    padding: 10px; /* Padding inside the search bar */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px 0 0 5px; /* Rounded corners (left side) */
+    outline: none; /* Remove default outline */
+    font-size: 16px; /* Font size */
+  }
+  
+  /* Styling for the search button */
+  .search-button {
+    padding: 10px 20px; /* Padding inside the button */
+    border: 2px solid #4CAF50; /* Green border */
+    border-left: none; /* Remove left border */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border-radius: 0 5px 5px 0; /* Rounded corners (right side) */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .search-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+
+
+  #footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 0; /* Some padding */
+    text-align: center; /* Centered text */
+    position: fixed; /* Fixed position at the bottom */
+    width: 100%; /* Full width */
+    height: 90px;
+    bottom: 0; /* Align to bottom */
+  }
+  
+  #footer .footer-content {
+    max-width: 1000px; /* Max width for the content */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  #footer .footer-content p {
+    margin: 10px 0; /* Margin for the paragraph */
+  }
+  
+  #footer .social-links {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+  }
+  
+  #footer .social-links li {
+    display: inline; /* Display list items in a row */
+    margin: 0 10px; /* Add some space between items */
+  }
+  
+  #footer .social-links li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size */
+  }
+  
+  #footer .social-links li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+
+  .user-details {
+    display: flex; /* Display flex for image and details side by side */
+    align-items: center; /* Center items vertically */
+    margin: 20px; /* Some margin around the container */
+    padding: 20px; /* Some padding inside the container */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+  }
+  
+  .user-image {
+    width: 300px; /* Width of the user image */
+    height: 200px; /* Height of the user image */
+    border-radius: 5%; /* Make the image circular */
+    margin-right: 20px; /* Space between image and details */
+  }
+  
+  .details {
+    line-height: 1.6; /* Line height for spacing between lines */
+  }
+  
+  .details p {
+    margin: 5px 0; /* Margin for paragraphs */
+  }
+
+  .cart-shimmer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px ;
+    background: #f6f7f8;
+  }
+  
+  .shimmer-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    background: #e0e0e0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-details {
+    flex-grow: 1;
+    margin: 20px;
+  }
+  
+  .shimmer-line {
+    height: 100px;
+    width: 50%;
+    background: #e0e0e0;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-line.short {
+    width: 50%;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .shimmer-image::before,
+  .shimmer-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 1.5s infinite;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+}
+  
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
