@@ -1,5 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom/client"
 import Header from "./header";
 import Body from "./Body";
 import Footer from "./Footer";
@@ -18,11 +18,11 @@ import Footer from "./Footer";
 
 let MyWebPage=()=>{
     return(
-        [  
-         <Header/>,
-         <Body/>,
+        <>
+         <Header/>
+         <Body/>
          <Footer/>
-        ]
+        </>
     )
 }
 

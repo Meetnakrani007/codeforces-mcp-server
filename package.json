@@ -2,9 +2,9 @@
   "name": "webapplication",
   "version": "1.0.0",
   "description": "MyAnotherApp",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -13,7 +13,7 @@
   "author": "Satyam",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel": "^2.0.0"
   },
   "dependencies": {
     "react": "^18.3.1",
