@@ -1,0 +1,43 @@
+{
+  "name": "codeforces-mcp-tools",
+  "version": "1.0.2",
+  "description": "Professional Codeforces MCP Server for AI Agents",
+  "main": "dist/server.js",
+  "bin": {
+    "codeforces-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "mcp",
+    "codeforces",
+    "ai-tools",
+    "claude",
+    "competitive-programming",
+    "analytics",
+    "codeforces-mcp",
+    "codeforces-mcp-server",
+    "codeforces-server"
+  ],
+  "author": "Meet Nakrani",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "axios": "^1.15.2",
+    "express": "^5.2.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  }
+}

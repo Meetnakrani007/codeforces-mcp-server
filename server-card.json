@@ -1,0 +1,138 @@
+{
+  "serverInfo": {
+    "name": "codeforces-mcp-tools",
+    "version": "1.0.1"
+  },
+  "authentication": {
+    "required": false
+  },
+  "tools": [
+    {
+      "name": "get_user_stats",
+      "description": "Fetch complete user profile, rating, rank, and solve counts.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle (e.g., tourist)" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_recent_activity",
+      "description": "Fetch the most recently solved problem, contest, points, link, and tags by the user.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_tag_breakdown",
+      "description": "Fetch all accepted submissions for a user and calculate how many unique problems they have solved for each topic tag.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_best_contest_rank",
+      "description": "Fetch the user's best ever performance (highest rank) in a single Codeforces contest.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "analyze_weak_topics",
+      "description": "Identify underperforming tags and suggest focus areas based on the user's lowest solve counts.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_rating_history",
+      "description": "Fetch the user's rating changes over time, including their latest contest performances and overall rating trajectory.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_virtual_contest",
+      "description": "Suggest custom practice virtual contests based on the user's rating, excluding ones they have already competed in.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_recommend_problems",
+      "description": "Smart problem suggestions based on the user's current rating and their weakest topic areas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle": { "type": "string", "description": "The Codeforces user handle" }
+        },
+        "required": ["handle"]
+      }
+    },
+    {
+      "name": "get_search_problems",
+      "description": "Search the Codeforces problem set by specific tags, minimum rating, and maximum rating.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tags": { "type": "array", "items": { "type": "string" }, "description": "List of topic tags to search for" },
+          "minRating": { "type": "number", "description": "Minimum difficulty rating" },
+          "maxRating": { "type": "number", "description": "Maximum difficulty rating" },
+          "limit": { "type": "number", "description": "Number of problems to return (default 5, max 20)" }
+        }
+      }
+    },
+    {
+      "name": "get_problem_stats",
+      "description": "Fetch deep statistics for a specific Codeforces problem, including its rating, global solve count, and topic tags.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "contestId": { "type": "number", "description": "The Codeforces contest ID (e.g., 2044)" },
+          "index": { "type": "string", "description": "The problem index letter (e.g., 'E' or 'A1')" }
+        },
+        "required": ["contestId", "index"]
+      }
+    },
+    {
+      "name": "compare_users",
+      "description": "Compare two Codeforces users side-by-side, including their ratings, total solves, problem overlap, and unique solves.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "handle1": { "type": "string", "description": "The first Codeforces user handle" },
+          "handle2": { "type": "string", "description": "The second Codeforces user handle" }
+        },
+        "required": ["handle1", "handle2"]
+      }
+    }
+  ],
+  "resources": [],
+  "prompts": []
+}
