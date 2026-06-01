@@ -1,4 +1,5 @@
 # codeforces-mcp-tools
+[![smithery badge](https://smithery.ai/badge/nakranimeet2005/codeforces-mcp-tools)](https://smithery.ai/servers/nakranimeet2005/codeforces-mcp-tools)
 
 An enterprise-grade **Model Context Protocol (MCP)** server for the **Codeforces API**. This integration transforms AI agents like **Claude Desktop** and **Cursor** into personalized competitive programming coaches through deep user analytics and smart problem discovery.
 
